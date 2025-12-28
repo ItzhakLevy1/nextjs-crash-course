@@ -1,3 +1,4 @@
+// Type definition for an event item
 export type EventItem = {
   image: string;
   title: string;
@@ -7,6 +8,7 @@ export type EventItem = {
   time: string; // e.g., "09:00 AM"
 };
 
+// Array of event items
 export const events: EventItem[] = [
   {
     image: "/images/event1.png",
