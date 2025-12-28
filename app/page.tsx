@@ -1,3 +1,5 @@
+import ExploreBtn from "@/components/ExploreBtn";
+
 const page = () => {
   return (
     <section>
@@ -7,8 +9,20 @@ const page = () => {
       <p className="text-center mt-5">
         Hackatons, Meetups, and Confrences, All in One Place
       </p>
+      <ExploreBtn />
+      <div className="mt-20 space-y-7">
+        <h3>Featured Events</h3>
+        <ul className="events">
+          {/* A dummy array as a events data object  */}
+          {[1, 2, 3, 4, 5].map((event) => (
+            <li key={event}>Event {event}</li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
 
 export default page;
+
+/* This home page is server side rendered to get the benefits of SEO boost and allow quick load times  */
