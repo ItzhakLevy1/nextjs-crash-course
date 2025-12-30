@@ -40,6 +40,7 @@ BookingSchema.pre("save", async function () {
 BookingSchema.index({ eventId: 1 });
 BookingSchema.index({ eventId: 1, createdAt: -1 });
 BookingSchema.index({ email: 1 });
+// The DB will inforce a rull that will block duplicates - no one could book the same event twice using the same email address
 BookingSchema.index(
   { eventId: 1, email: 1 },
   { unique: true, name: "uniq_event_email" }
